@@ -2,24 +2,33 @@
 
 [ext_resource type="Script" uid="uid://c453x80lorh6" path="res://Scripts/obstacle.gd" id="1_sl1jc"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_15o2q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcbvg"]
-size = Vector2(181, 857.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl1jc"]
-size = Vector2(186, 902)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p81s"]
 
 [node name="Obstacle" type="Node2D"]
 script = ExtResource("1_sl1jc")
 
 [node name="Top" type="StaticBody2D" parent="." groups=["danger"]]
+position = Vector2(0, -350)
+scale = Vector2(4, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Top"]
+modulate = Color(0.37884104, 0.56215477, 0.26076943, 1)
+scale = Vector2(20, 20)
+texture = SubResource("CanvasTexture_15o2q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(1004.5, 425.25)
-shape = SubResource("RectangleShape2D_qcbvg")
+shape = SubResource("RectangleShape2D_2p81s")
 
-[node name="bottom" type="StaticBody2D" parent="."]
+[node name="Bottom" type="StaticBody2D" parent="." groups=["danger"]]
+position = Vector2(0, 350)
+scale = Vector2(4, 20)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
-position = Vector2(1015, 1635)
-shape = SubResource("RectangleShape2D_sl1jc")
+[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
+modulate = Color(0.37884104, 0.56215477, 0.26076943, 1)
+scale = Vector2(20, 20)
+texture = SubResource("CanvasTexture_15o2q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+shape = SubResource("RectangleShape2D_2p81s")

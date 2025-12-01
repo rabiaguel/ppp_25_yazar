@@ -1,1 +1,7 @@
+res://Scenes/gdscript_practice.tscn
 res://Scenes/main.tscn
+res://Scripts/avatar.gd
+res://Scripts/detection_area.gd
+res://Scenes/obstacle.tscn
+res://Scenes/spawner.tscn
+res://Scripts/spawner.gd
