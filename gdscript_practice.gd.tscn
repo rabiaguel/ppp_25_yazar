@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnj34ogsh35la"]
+
+[ext_resource type="Script" uid="uid://6pltx4j8s5q" path="res://math_operations.gd" id="1_e2wkn"]
+
+[node name="GdscriptPractice" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_e2wkn")
