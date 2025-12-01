@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfptsklhovlmc"]
+
+[ext_resource type="Script" uid="uid://c453x80lorh6" path="res://obstacle.gd" id="1_sl1jc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcbvg"]
+size = Vector2(181, 857.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl1jc"]
+size = Vector2(186, 902)
+
+[node name="Obstacle" type="Node2D"]
+script = ExtResource("1_sl1jc")
+
+[node name="Top" type="StaticBody2D" parent="." groups=["danger"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(1004.5, 425.25)
+shape = SubResource("RectangleShape2D_qcbvg")
+
+[node name="bottom" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
+position = Vector2(1015, 1635)
+shape = SubResource("RectangleShape2D_sl1jc")
